@@ -1,7 +1,7 @@
 const Koa = require('koa');
 const { bodyParser } = require("@koa/bodyparser");
 
-const OPENAI_BASE_URL = 'https://api.openai-proxy.com' ?? process.env.OPENAI_BASE_URL
+const OPENAI_BASE_URL = process.env.OPENAI_BASE_URL ?? 'https://api.openai-proxy.com'
 
 const API_URL_LIST = [
   '/models',
