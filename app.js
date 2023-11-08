@@ -1,6 +1,7 @@
 const Koa = require('koa');
 const { bodyParser } = require("@koa/bodyparser");
 
+const port = process.env.PORT || 3000;
 const OPENAI_BASE_URL = process.env.OPENAI_BASE_URL ?? 'https://api.openai.com/v1'
 
 const API_URL_LIST = [
@@ -55,4 +56,4 @@ const main = async ctx => {
 
 app.use(main);
 
-app.listen(9000);
+app.listen(port);
